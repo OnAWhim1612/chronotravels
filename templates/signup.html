@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Minutes for Good</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #0C3057;
+      font-size: 2.2em;
+      text-align: center;
+      margin-bottom: 30px;
+      font-family: 'Arial', sans-serif;
+    }
+
+    p {
+      color: #0C3057;
+      font-size: 1em;
+      text-align: center;
+      margin-bottom: 40px;
+      font-family: 'Arial', sans-serif;
+    }
+
+    form {
+     padding: 30px;
+
+    }
+
+    label {
+      display: block;
+      font-size: 1.2em;
+      color: #0C3057;
+      margin-bottom: 10px;
+      font-family: 'Arial', sans-serif;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #0C3057;
+      border-radius: 5px;
+      font-size: 1em;
+      font-family: 'Arial', sans-serif;
+    }
+
+    input[type="submit"] {
+      background-color: #0C3057;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      padding: 12px 20px;
+      font-size: 1.2em;
+      cursor: pointer;
+      width: 100%;
+      font-family: 'Arial', sans-serif;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0C3057;
+    }
+
+    .error {
+      color: #FF0000;
+      text-align: center;
+      margin-top: 10px;
+      font-family: 'Arial', sans-serif;
+    }
+  </style>
+
+  <script>
+    function validateForm() {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+
+      if (name === "" || email === "" || password === "") {
+        alert("Please fill in all fields");
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to ChronoTravels</h1>
+    <p>The Universe's best Space-Time Adventure Agency</p>
+    <form action="/signup" method="POST" onsubmit="return validateForm()">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <input type="submit" value="Sign up">
+    </form>
+    {% if message %}
+    <p class="error">{{ message }}</p>
+    {% endif %}
+  </div>
+</body>
+</html>
+

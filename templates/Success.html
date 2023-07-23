@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChronoTravels</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .mission-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px; /* Adds spacing between the mission cards */
+            margin-top: 20px; /* Adds spacing between the iframe and the mission cards */
+        }
+
+        .mission-card {
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .mission-card img {
+            max-width: 100%;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+
+        .mission-card p {
+            font-size: 14px;
+            color: #444;
+            line-height: 1.5;
+        }
+
+        .mission-card a {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            padding: 8px 16px;
+            background-color: #0C3057;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+
+        .mission-card a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Chrono Travels</h1>
+    <h2>Intro:</h2>
+    <div style="display: flex; justify-content: center;">
+        <iframe src="https://scratch.mit.edu/projects/876790916/embed" allowtransparency="true" width="485" height="402"
+            frameborder="0" scrolling="no" allowfullscreen></iframe>
+    </div>
+    <h2>Missions:</h2>
+    <div class="mission-cards">
+        <!-- Mission 1 -->
+        <div class="mission-card">
+            <img src="https://i.imgur.com/VVPCR1h.jpg" alt="Mission 1">
+            <p>Mission 1:The Pink Artefact Maze</p>
+            <a href="mission1">Start Mission</a>
+        </div>
+
+        <!-- Mission 2 -->
+        <div class="mission-card">
+            <img src="https://i.imgur.com/qbbr9DH.jpg" alt="Mission 2">
+            <p>Mission 2: Catch the Alien</p>
+            <a href="mission2">Start Mission</a>
+        </div>
+
+        <div class="mission-card">
+            <img src="https://i.imgur.com/VZdp6PX.jpg" alt="Mission 3">
+            <p>Mission 3</p>
+            <a href="#">Start Mission</a>
+        </div>
+
+    </div>
+</body>
+
+</html>
